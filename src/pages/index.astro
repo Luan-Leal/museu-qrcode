@@ -1,0 +1,189 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import { Image } from "../components/images/Image/Image";
+
+import { CardDisplay } from "../components/cards/display/CardDisplay";
+import { CardComImagem } from "../components/cards/comImagem/CardComImagem";
+import { ListaCardSugestao } from "../components/cards/sugestao/ListaCardSugestao";
+
+import { Titulo } from "../components/titulo/Titulo/Titulo";
+import { CorpoTexto } from "../components/titulo/CorpoTexto/CorpoTexto";
+
+const pageName = "Nome da Peça";
+---
+
+<Layout title={pageName}>
+  <main>
+    <CardDisplay
+      img="/qr-code/assets/fotoQuadro.jpg"
+      alt="imagem"
+      title={pageName}
+    >
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum vero
+        odio, molestias voluptates totam ipsam asperiores, architecto repellat
+        hic accusamus corporis nulla eligendi adipisci? Temporibus quae
+        doloremque architecto non molestiae.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum vero
+        odio, molestias voluptates totam ipsam asperiores, architecto repellat
+        hic accusamus corporis nulla eligendi adipisci? Temporibus quae
+        doloremque architecto non molestiae.
+      </p>
+    </CardDisplay>
+
+    <section class="content">
+      <div class="contentLine">
+        <Titulo level="2">Primeiro Subtitulo</Titulo>
+
+        <div class="contentSpacer"></div>
+
+        <CorpoTexto>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum vero
+          odio, molestias voluptates totam ipsam asperiores, architecto repellat
+          hic accusamus corporis nulla eligendi adipisci? Temporibus quae
+          doloremque architecto non molestiae.
+        </CorpoTexto>
+      </div>
+
+      <div class="contentBlockSpacer"></div>
+
+      <div class="doubleColumns">
+        <CardComImagem
+          titulo="Descrição curta da Imagem"
+          imagem="/qr-code/assets/fotoRaptor2.jpg"
+        >
+          Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+          turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+          fringilla accumsan, risus sem sollicitudin lacus, ut interdum.
+        </CardComImagem>
+
+        <CardComImagem
+          titulo="Descrição curta da Imagem"
+          imagem="/qr-code/assets/fotoRaptor2.jpg"
+        >
+          Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+          turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
+          fringilla accumsan, risus sem sollicitudin lacus, ut interdum.
+        </CardComImagem>
+      </div>
+
+      <div class="contentBlockSpacer"></div>
+
+      <div class="doubleColumns">
+        <Image
+          width="34rem"
+          height="28rem"
+          src="/qr-code/assets/fotoQuadro.jpg"
+          alt="Foto exemplo"
+        />
+
+        <div class="contentLine">
+          <Titulo level="2">Segundo Subtitulo</Titulo>
+
+          <div class="contentSpacer"></div>
+
+          <CorpoTexto>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum vero
+            odio, molestias voluptates totam ipsam asperiores, architecto
+            repellat hic accusamus corporis nulla eligendi adipisci? Temporibus
+            quae doloremque architecto non molestiae.
+          </CorpoTexto>
+        </div>
+      </div>
+    </section>
+
+    <div class="contentBlockSpacer"></div>
+
+    <Image
+      width="100%"
+      height="28rem"
+      src="/qr-code/assets/fotoLarga.jpg"
+      alt="Foto exemplo"
+      withDetails={false}
+    />
+
+    <div class="contentBlockSpacer"></div>
+
+    <section class="content">
+      <div class="contentLine">
+        <Titulo level="2">Terceiro Subtitulo</Titulo>
+
+        <div class="contentSpacer"></div>
+
+        <CorpoTexto>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum vero
+          odio, molestias voluptates totam ipsam asperiores, architecto repellat
+          hic accusamus corporis nulla eligendi adipisci? Temporibus quae
+          doloremque architecto non molestiae.
+        </CorpoTexto>
+      </div>
+    </section>
+
+    <hr />
+
+    <div class="content">
+      <h3 class="suggestionSubtitle">Sugestão de próximas peças</h3>
+
+      <ListaCardSugestao />
+    </div>
+  </main>
+
+  <style>
+    main {
+      padding-top: var(--size-10);
+    }
+
+    .content {
+      margin: auto;
+      max-width: 900px;
+      padding: var(--spacing--medium);
+    }
+
+    .content:first-of-type {
+      padding-top: var(--size-10);
+    }
+
+    .contentLine {
+      margin: auto;
+      width: fit-content;
+      margin-top: var(--spacing--large);
+      color: var(--color__neutral--dark);
+    }
+
+    .doubleColumns {
+      display: flex;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    @media (max-width: 1000px) {
+    .doubleColumns {
+      flex-direction: column
+    }
+    }
+
+    .contentBlockSpacer {
+      margin: var(--spacing--xlarge) 0;
+    }
+
+    .contentSpacer {
+      margin: var(--spacing--regular) 0;
+    }
+
+    hr {
+      opacity: 0.4;
+      height: var(--border-size-1);
+      background-color: var(--color__neutral--dark);
+    }
+
+    .suggestionSubtitle {
+      width: 100%;
+      text-align: center;
+      font-size: var(--font__size--large);
+      color: var(--color__neutral--darker);
+      padding-bottom: 80px;
+    }
+  </style>
+</Layout>

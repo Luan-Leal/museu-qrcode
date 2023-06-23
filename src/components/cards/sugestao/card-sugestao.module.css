@@ -1,0 +1,35 @@
+.cardTitle {
+  font-family: var(--font__family);
+  font-size: var(--font__size--large);
+  color: var(--color__neutral--darker);
+}
+
+.cardDescription {
+  font-family: var(--font__family);
+  font-size: var(--font__size--small);
+  color: var(--color__neutral--dark);
+  font-weight: var(--font__weight--normal);
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: var(--spacing--regular);
+  border-radius: var(--border__radius--large);
+  box-shadow: var(--shadow--medium);
+}
+
+.containerImg {
+  flex: 1;
+}
+
+.containerImg img {
+  object-fit: cover;
+}
+
+.containerText {
+  padding-left: var(--spacing--regular);
+}

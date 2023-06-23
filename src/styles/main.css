@@ -1,0 +1,108 @@
+/* the props */
+@import "open-props/style";
+
+/* optional imports that use the props */
+@import "open-props/normalize";
+@import "open-props/buttons";
+
+/* individual imports */
+@import "open-props/colors";
+@import "open-props/fonts";
+@import "open-props/easings";
+@import "open-props/animations";
+@import "open-props/sizes";
+@import "open-props/gradients";
+/* see PropPacks for the full list */
+
+html {
+  --color__brand--normal: #1a99d6;
+  --color__brand--dark: #2c3340;
+
+  --color__neutral--lighter: #fbfcfd;
+  --color__neutral--light: #e8f2ff;
+  --color__neutral--dark: #596273;
+  --color__neutral--darker: #232021;
+
+  --color__accent--1: #8e2af0;
+  --color__accent--2: #00d5bb;
+  --color__accent--3: #2583fd;
+  --color__accent--4: #fc3762;
+  --color__accent--5: #ff9320;
+  --color__accent--6: #46ce1f;
+
+  --gradient--blue: var(--gradient-7);
+
+  --shadow--low: var(--shadow-2);
+  --shadow--medium: var(--shadow-3);
+  --shadow--high: var(--shadow-4);
+
+  --spacing--xxsmall: var(--size-1);
+  --spacing--xsmall: var(--size-2);
+  --spacing--small: var(--size-3);
+  --spacing--regular: var(--size-4);
+  --spacing--medium: var(--size-6);
+  --spacing--large: var(--size-7);
+  --spacing--xlarge: var(--size-8);
+
+  --border__radius--small: var(--radius-1);
+  --border__radius--regular: var(--radius-2);
+  --border__radius--large: var(--radius-3);
+  --border__radius--full: var(--radius-round);
+
+  --layer__alwaysBottom: -1;
+  --layer__bottom: var(--layer-1);
+  --layer__low: var(--layer-2);
+  --layer__regular: var(--layer-3);
+  --layer__medium: var(--layer-4);
+  --layer__high: var(--layer-5);
+  --layer__alwaysTop: 100;
+
+  --transition__fast: var(--ease-squish-1);
+  --transition__regular: var(--ease-squish-2);
+  --transition__slow: var(--ease-squish-4);
+
+  --font__family: var(--font-sans);
+
+  --font__weight--light: var(--font-weight-3);
+  --font__weight--normal: var(--font-weight-5);
+  --font__weight--bold: var(--font-weight-7);
+
+  --font__kerning--tight: var(--font-letterspacing-1);
+  --font__kerning--normal: var(--font-letterspacing-2);
+  --font__kerning--loose: var(--font-letterspacing-3);
+
+  --font__lineHeight--tight: var(--font-lineheight-0);
+  --font__lineHeight--normal: var(--font-lineheight-1);
+  --font__lineHeight--loose: var(--font-lineheight-2);
+
+  --font__size--xsmall: var(--font-size-00);
+  --font__size--small: var(--font-size-0);
+  --font__size--normal: var(--font-size-2);
+  --font__size--medium: var(--font-size-3);
+  --font__size--large: var(--font-size-4);
+  --font__size--xlarge: var(--font-size-5);
+}
+
+html {
+  color: var(--color__neutral--darker);
+  background-color: var(--color__neutral--lighter);
+}
+
+p {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: var(--font__family);
+  color: var(--color__neutral--dark);
+  font-size: var(--font__size--medium);
+  font-weight: var(--font__weight--light);
+  letter-spacing: var(--font__kerning--tight);
+  line-height: var(--font__lineHeight--tight);
+
+  hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  word-break: break-word;
+  -ms-word-break: break-all;
+  word-wrap: break-word;
+}
